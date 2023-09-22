@@ -1,14 +1,23 @@
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import AppHeader from "./components/AppHeader.vue";
 export default {
   name: "App",
   data() {
     return {};
   },
-  components: {},
+  components: {
+    AppHeader,
+  },
 };
 </script>
 
-<template></template>
+<template>
+  <AppHeader></AppHeader>
+  <main class="bg-dark">
+    <div>
+      <h3>Content goes here</h3>
+    </div>
+  </main>
+</template>
 
 <style lang="scss"></style>
