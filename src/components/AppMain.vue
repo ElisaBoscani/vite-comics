@@ -1,4 +1,34 @@
-<script></script>
+<script>
+export default {
+  name: "AppMain",
+  data() {
+    return {
+      linkPage: [
+        {
+          img: "./src/assets/img/buy-comics-digital-comics.png",
+          name: "Digital Comics",
+        },
+        {
+          img: "./src/assets/img/buy-comics-merchandise.png",
+          name: "Dc Merchandise",
+        },
+        {
+          img: "./src/assets/img/buy-comics-subscriptions.png",
+          name: "Subscription",
+        },
+        {
+          img: "./src/assets/img/buy-comics-shop-locator.png",
+          name: "Comic shop locator",
+        },
+        {
+          img: "./src/assets/img/buy-dc-power-visa.svg",
+          name: "Dc Power Visa",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <template>
   <main>
@@ -9,17 +39,13 @@
     </section>
     <section class="bg_botton">
       <div
-        class="p-5 container d-flex justify-content-between align-items-center"
+        class="p-4 container d-flex justify-content-between align-items-center"
       >
-        <div>
-          <img
-            src="../assets/img/buy-comics-digital-comics.png"
-            alt=""
-            class="pe-2"
-          />
-          <span class="text-white text-uppercase">Digital Comics</span>
+        <div v-for="link in linkPage">
+          <img :src="link.img" alt="" class="pe-2" />
+          <span class="text-white text-uppercase">{{ link.name }}</span>
         </div>
-        <div>
+        <!--   <div>
           <img
             src="../assets/img/buy-comics-merchandise.png"
             alt=""
@@ -46,7 +72,7 @@
         <div>
           <img src="../assets/img/buy-dc-power-visa.svg" alt="" class="pe-2" />
           <span class="text-white text-uppercase">Dc Power Visa</span>
-        </div>
+        </div> -->
       </div>
     </section>
   </main>
@@ -54,6 +80,11 @@
 
 <style lang="scss" scoped>
 @use "../assets/scss/partials/variables" as *;
+section {
+  position: relative;
+
+  z-index: 2;
+}
 .bg_top {
   background-color: $comics_primary;
   color: white;

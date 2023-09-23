@@ -1,2 +1,8 @@
 @use "/node_modules/bootstrap/scss/bootstrap.scss";
 @use "./partials/variables" as *;
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+}
