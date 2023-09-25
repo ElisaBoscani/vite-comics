@@ -23,7 +23,7 @@ export default {
       <div class="p-3"></div>
     </section>
     <section class="bg">
-      <div class="d-flex flex-wrap container justify-content-center">
+      <div class="d-flex flex-wrap justify-content-between">
         <MainProps
           :thumb="product.thumb"
           :series="product.series"

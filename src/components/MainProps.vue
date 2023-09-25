@@ -17,11 +17,12 @@ export default {
       <h3>{{ series }}</h3>
     </div>
   </div> -->
-
-  <div class="card bg_card" style="width: 18rem">
-    <img :src="thumb" class="card-img-top" alt="..." />
-    <div class="card-body">
-      <h3 class="fs-5">{{ series }}</h3>
+  <div class="col">
+    <div class="card bg_card border-0" style="width: 10rem">
+      <img :src="thumb" class="card-img-top" alt="..." />
+      <div class="">
+        <h3 class="fs-5 text-white">{{ series }}</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -29,6 +30,9 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/partials/variables" as *;
 img {
-  height: 100%;
+  height: 60%;
+}
+.bg_card {
+  background-color: $comics_footer;
 }
 </style>
