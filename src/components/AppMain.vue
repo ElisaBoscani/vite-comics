@@ -4,9 +4,9 @@ export default {
   name: "AppMain",
   data() {
     return {};
-    components: {
-      MainLink;
-    }
+  },
+  components: {
+    MainLink,
   },
 };
 </script>
@@ -14,9 +14,7 @@ export default {
 <template>
   <main>
     <section class="bg_top">
-      <div class="p-3 container">
-        <h3>Content goes here</h3>
-      </div>
+      <div class="p-3"></div>
     </section>
     <MainLink></MainLink>
   </main>
@@ -25,25 +23,12 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/scss/partials/variables" as *;
 section {
-  position: relative;
+  height: 200px;
+}
 
-  z-index: 2;
-}
-.bg_top {
-  background-color: $comics_primary;
-  color: white;
-  height: 120px;
-}
-.bg_botton {
-  background-color: $comics_secondary;
-}
-img {
-  width: 45px;
-}
-.w_img {
-  width: 40px;
-}
-span {
-  font-size: $font-size-base;
+div {
+  background-image: url("../assets/img/jumbotron.jpg");
+  background-size: cover;
+  height: 200px;
 }
 </style>
