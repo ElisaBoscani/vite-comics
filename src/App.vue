@@ -3,6 +3,7 @@ import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/AppMain.vue";
 import AppFooterTop from "./components/AppFooterTop.vue";
 import AppFooterBottom from "./components/AppFooterBottom.vue";
+import product from "./product.js";
 export default {
   name: "App",
   data() {
